@@ -51,6 +51,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 
 ### 🚁 Station 1: Drone Station (Tello EDU)
 
+* **Instructor Resource**: [View or Download the Drone Station Instructor Guide](https://drive.google.com/file/d/1UVqs8tgtNY4hx84DvPaDvKj8sgua7sPZ/view?usp=drive_link) (PDF)
 * **What it is**: An autonomous flight challenge where campers program a DJI Tello EDU drone using DroneBlocks on an iPad to fly from Table A to Table B.
 * **Core Goals**:
   * Sequence commands in an exact algorithm.
