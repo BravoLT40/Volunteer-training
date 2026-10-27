@@ -1064,10 +1064,32 @@
           <div class="info-box" style="margin-top: 15px;">
             <h3>🛠️ Volunteer Station Guide & Pacing</h3>
             <ul>
-              <li><strong>Meet Campers Where They Are:</strong> Start simple with everyday items (masking tape line, two water bottles). If students breeze through, add 90° turns, narrow alleys, or reverse parking!</li>
-              <li><strong>Hardware & Connection:</strong> Connect Pi to the robot's Wi-Fi network (<code>GoPiGo_xxxx</code>), open browser to <code>mygopigo.com</code>, and launch Bloxter.</li>
-              <li><strong>Safety Override:</strong> Remind campers the robot will keep going if programmed without a stop. Point out the top <strong>STOP</strong> button in the web interface.</li>
+              <li><strong>Meet Campers Where They Are:</strong> Build courses using items in the room (tape, water bottles, boxes, chairs). Start with an easy straight shot, then add 90° turns, slalom curves, or reverse navigation as students gain confidence!</li>
+              <li><strong>Hardware & Pairing:</strong> Connect robot battery cable to battery pack (GoPiGo runs on AA batteries). Power on GoPiGo (blue LED lights when Wi-Fi is ready). Connect the Pi to the robot's Wi-Fi network (name is taped on device or defaults to <code>GoPiGo</code>; note: internet will disconnect). In Chromium, visit <code>mygopigo.com</code> and select <strong>Bloxter</strong>.</li>
+              <li><strong>Safety Override:</strong> The robot has no automatic edge detection—if told to go, it will drive off tables or into walls. Point out the top <strong>STOP</strong> button in the web interface.</li>
             </ul>
+          </div>
+
+          <div class="info-box tip" style="margin-top: 15px;">
+            <h3>📋 Station Notes & Progressive Challenges</h3>
+            <ol>
+              <li><strong>Part 1 (Out & Back):</strong> Drive 10 feet straight out, turn 180°, and return 10 feet to base.</li>
+              <li><strong>Part 2 (Square Route):</strong> Drive in a square (10 feet on all four sides) using 90° turns to return to origin.</li>
+              <li><strong>Part 3 (Custom Obstacle Course):</strong> Follow a path taped on the floor or winding around classroom objects.</li>
+              <li><strong>Part 4 (Speed & Precision Tuning):</strong> Optimize speed settings and code duration to finish the course as cleanly and quickly as possible.</li>
+              <li><strong>Extension Challenges:</strong>
+                <ul>
+                  <li>Navigate the course entirely in reverse.</li>
+                  <li>Compare control modes: Bloxter blocks vs. Python API (<code>move_seconds</code>, <code>move_inches</code>, or wheel circumference degrees).</li>
+                  <li>Drive Mode (manual joystick driving through the web UI) for quick orientation before coding.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="info-box warning-box" style="margin-top: 15px;">
+            <h3>🔌 Teardown & Battery Care</h3>
+            <p>1. Shut down the Pi from the desktop menu and unplug its USB-C cable.<br>
+            2. Power off the GoPiGo using the side button, wait a few seconds, then <strong>unplug the battery cable from the battery pack</strong> to prevent draining the AA batteries between sessions.</p>
           </div>
         `
       },
