@@ -8,20 +8,23 @@ This manual serves as the companion guide to the interactive training portal (`v
 
 ## 🏛️ Module 1: Who is The Pi Academy?
 
-### High-Level Mission & Vision ([www.thepiacademy.org](https://www.thepiacademy.org))
-The Pi Academy is a non-profit organization dedicated to closing the digital divide and igniting computer science passion in young learners. We provide hands-on, high-engagement STEM camps that turn middle schoolers from passive screen users into creative programmers, game developers, robotics engineers, and problem solvers.
+### High-Level Mission & Goals ([www.thepiacademy.org](https://www.thepiacademy.org))
+* **Mission:** To empower underrepresented youth to pursue careers in technology by providing accessible, engaging, and culturally relevant coding education and mentorship.
+* **Goals:** To inspire and equip underrepresented youth to become the next generation of tech leaders and innovators, driving positive change in our community and beyond.
 
-### Why Middle School?
-Research shows that ages 10–13 are the formative years where students form their identities around STEM. By putting real microcomputers (Raspberry Pi), programmable drones, robotics, and game engines into their hands, we demystify technology and build lasting self-efficacy.
+### The Flagship Program (Ages 10–13)
+The **Raspberry Pi Youth Coding Camp** is The Pi Academy's flagship program for middle school students. We teach students how to transition from passive consumers of tech to creative programmers, hardware makers, and problem solvers.
+* **Take-Home Tech:** Every camper takes home a complete Raspberry Pi computer desktop—including a monitor, keyboard, and mouse—so they can continue learning and creating beyond camp.
 
-### ⭐ The Golden Rule for All Volunteers
-> **"Never take the mouse or keyboard away from a camper."**
-* Our core teaching pedagogy is **guided discovery**.
-* If a student encounters an error or gets stuck, guide their eyes and fingers with questions:
-  * *"What line number does the red error message point to?"*
-  * *"Let's look at the end of that line together—do you see any missing quotes or parentheses?"*
-  * *"What do you think happens if we change that variable?"*
-* When a student types the solution themselves and sees it work, their confidence surges.
+### 🤝 Your Role as a Mentor: Creating Belonging
+Volunteers are mentors who show every student that they belong in STEM:
+* **Learn names & ask about interests:** Connect coding concepts to things they love (gaming, sports, art, music, community).
+* **Connect activities to real tech careers:** Highlight how camp skills power robotics, game dev, cybersecurity, and web engineering.
+* **Foster genuine belonging:** Ensure every student leaves thinking: *"I can do this, and there is a place for me in technology."*
+
+### ⭐ Hands-On Mentoring: Let Campers Lead
+> **"Let campers lead whenever possible. Use questions and hints to help them work through coding challenges. When direct assistance is needed, explain what you are doing, ask permission before taking control, and return control promptly."**
+* **Learning Challenge vs. Technical Issue:** Distinguish between a learning challenge (bugs, typos, logic hurdles—guide through questions) and a technical blocker (dropped Wi-Fi, hardware disconnect—step in transparently with permission to fix the blocker so they can keep participating).
 
 ---
 
