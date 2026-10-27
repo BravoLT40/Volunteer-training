@@ -6,11 +6,13 @@
   <title>The Pi Academy - Florida Camp Volunteer Training</title>
   <style>
     :root {
-      --primary: #c51a4a; /* Pi Red */
-      --primary-dark: #911235;
-      --primary-light: #ffedf2;
-      --secondary: #00875a; /* Emerald green */
-      --accent: #2684ff; /* Tech blue */
+      --primary: #f99d1e; /* Pi Academy Orange */
+      --primary-dark: #d8800b;
+      --primary-light: #fff5e6;
+      --secondary: #1b80c4; /* Pi Academy Blue */
+      --secondary-dark: #14669e;
+      --secondary-light: #eef7fc;
+      --accent: #1b80c4; /* Pi Academy Blue */
       --warning: #f59e0b;
       --dark: #0f172a;
       --slate: #475569;
@@ -58,15 +60,20 @@
     .brand-logo {
       width: 44px;
       height: 44px;
-      background: var(--primary);
+      background: #ffffff;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      font-weight: 800;
-      color: white;
-      box-shadow: 0 2px 8px rgba(197, 26, 74, 0.4);
+      overflow: hidden;
+      padding: 2px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .brand-title h1 {
@@ -105,7 +112,7 @@
 
     .progress-fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--primary), #10b981);
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       width: 0%;
       transition: width 0.3s ease;
     }
@@ -667,7 +674,9 @@
   <!-- Sidebar -->
   <aside class="sidebar">
     <div class="brand">
-      <div class="brand-logo">π</div>
+      <div class="brand-logo">
+        <img src="pi-academy-logo.png" alt="The Pi Academy Logo" onerror="this.parentElement.innerHTML='<span style=\'color:#f99d1e;font-size:24px;font-weight:800;\'>π</span>'">
+      </div>
       <div class="brand-title">
         <h1>The Pi Academy</h1>
         <p>Florida Camp Volunteer Portal</p>
