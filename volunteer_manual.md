@@ -74,6 +74,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 
 ### 🍕 Station 2: Pizza Delivery Game (Pygame)
 
+* **Instructor Resource**: [View or Download the Pizza Delivery Game Lesson Plan](https://drive.google.com/file/d/1ixqBf37FoFb550ygyyUYX42IoUYgnn62/view?usp=sharing) (PDF)
 * **Repository**: [`The-Pi-Academy/pizza-delivery-game`](https://github.com/The-Pi-Academy/pizza-delivery-game)
 * **What it is**: A medieval pizza delivery 2D platformer written in Python. The player attacks with a breadstick sword and fires pizza slices into delivery ovens using a pizza cannon. Levels 2 & 3 are intentionally impossible without editing code!
 * **Core Goals**:
@@ -99,6 +100,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 
 ### 💻 Station 3: Simple Website (HTML / CSS / JavaScript)
 
+* **Instructor Resource**: [View or Download the Simple Website Lesson Plan](https://drive.google.com/file/d/19TgsjZD--jXBhG-piWo6UkMxyPPtps7b/view?usp=sharing) (PDF)
 * **Repository**: [`The-Pi-Academy/simple-website`](https://github.com/The-Pi-Academy/simple-website)
 * **What it is**: A self-contained, single-file (`index.html`) web development lab.
 * **Core Goals**:
@@ -118,6 +120,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 
 ### 🐢 Station 4: Turtle Race (Python Turtle Graphics)
 
+* **Instructor Resource**: [View or Download the Turtle Race Lesson Plan](https://drive.google.com/file/d/1Uhr-kBBBcE6Sw1SUIUrXFXjiN_31nCfV/view?usp=sharing) (PDF)
 * **Repository**: [`The-Pi-Academy/turtle-race`](https://github.com/The-Pi-Academy/turtle-race)
 * **What it is**: An 11-racer animated competition comparing hardcoded code (`01-original.py`) with clean, modular code (`02-improved.py`).
 * **Core Goals**:
