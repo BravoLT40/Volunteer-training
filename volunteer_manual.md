@@ -28,7 +28,31 @@ Volunteers are mentors who show every student that they belong in STEM:
 
 ---
 
-## ⏰ Module 2: The Camp Day Breakdown
+## 🍓 Module 2: An Introduction to Raspberry Pi
+
+* **Instructor Resource**: [View or Download the Raspberry Pi Instructor Guide](https://drive.google.com/file/d/1d0jFbc3oOhCBlEKkXcG-2RKTL-tpBdtu/view?usp=sharing) (PDF)
+* **What is a Raspberry Pi**: A small, credit-card sized single-board computer with processor, memory, USB ports, and HDMI output. Allows campers to learn both software (programming) and hardware (electronics).
+* **Station Hardware Checklist**:
+  * Raspberry Pi 4 or 5 board
+  * 32GB MicroSD Card (the Pi's "hard drive" containing the OS and user files)
+  * Official USB-C power supply (minimum 3A for Pi 4, 5A for Pi 5)
+  * Monitor with micro-HDMI to HDMI cable (always connect to **HDMI0**, closest to the USB-C power port)
+  * USB Keyboard and Mouse
+  * Protective case / cooling
+* **Setup & Boot Steps**:
+  1. *Flash OS*: Use **Raspberry Pi Imager** on computer → Select device & 64-bit Raspberry Pi OS.
+  2. *Pre-configure Settings (Gear icon)*: Set username/password (avoid default `pi/raspberry`) and configure camp Wi-Fi.
+  3. *Connect Peripherals First*: MicroSD card, micro-HDMI into HDMI0, keyboard, mouse.
+  4. *Power On*: Plug in power supply last. The board powers on automatically into the desktop.
+* **Key Volunteer Troubleshooting**:
+  * *Black screen*: Verify micro-HDMI is in **HDMI0** (not HDMI1) and power supply is firmly seated.
+  * *Rainbow icon / Lightning bolt*: Low voltage warning! Power supply does not supply adequate current (needs 3A/5A).
+  * *"Command not found"*: Linux terminal commands are strictly case-sensitive. Check spelling or update with `sudo apt update`.
+  * *Wi-Fi issues*: Check network icon in top-right taskbar or reboot the board.
+
+---
+
+## ⏰ Module 3: The Camp Day Breakdown
 
 The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~15 middle school students:
 
@@ -168,9 +192,10 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 ## 🏆 Day 1 Volunteer Checklist
 
 Before campers arrive:
-1. [ ] Reviewed the Golden Rule: **Never touch the camper's keyboard or mouse**.
-2. [ ] Reviewed the 5-hour camp schedule and station transitions.
-3. [ ] Tested Guided Access and flight abort on the Drone Station iPad.
-4. [ ] Know the Developer Mode shortcut (`M` key) in the Pizza Delivery Game.
-5. [ ] Know how to run `git reset --hard` if a game script gets mangled.
-6. [ ] Excited to encourage, inspire, and celebrate every Florida camper! 🎉
+1. [ ] Reviewed Mentoring Guideline: **Let campers lead whenever possible** (ask permission before touching mouse/keyboard, explain actions, return control promptly).
+2. [ ] Verified Raspberry Pi hardware: Micro-HDMI connected to **HDMI0**, official 3A/5A power, and SD cards seated.
+3. [ ] Reviewed the 5-hour camp schedule and station transitions.
+4. [ ] Tested Guided Access and flight abort on the Drone Station iPad.
+5. [ ] Know the Developer Mode shortcut (`M` key) in the Pizza Delivery Game.
+6. [ ] Know how to run `git restore` or `git reset --hard` if game code crashes.
+7. [ ] Excited to encourage, inspire, and celebrate every Florida camper! 🎉
