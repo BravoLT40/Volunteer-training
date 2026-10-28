@@ -30,24 +30,29 @@ Volunteers are mentors who show every student that they belong in STEM:
 
 ## 🍓 Module 2: An Introduction to Raspberry Pi
 
+* **Subtitle**: Become familiar with the Raspberry Pi hardware, help campers connect and use their computers, and troubleshoot common setup issues. The designated setup team prepares the operating system before camp.
 * **Instructor Resource**: [View or Download the Raspberry Pi Instructor Guide](https://drive.google.com/file/d/1d0jFbc3oOhCBlEKkXcG-2RKTL-tpBdtu/view?usp=sharing) (PDF)
 * **What is a Raspberry Pi**: A small, credit-card sized single-board computer with processor, memory, USB ports, and HDMI output. Allows campers to learn both software (programming) and hardware (electronics).
-* **Station Hardware Checklist**:
+* **Essential Hardware Checklist for Each Camp Computer**:
   * Raspberry Pi 4 or 5 board
-  * 32GB MicroSD Card (the Pi's "hard drive" containing the OS and user files)
+  * 32GB MicroSD Card (preloaded with Raspberry Pi OS; serves as the Pi's "hard drive")
   * Official USB-C power supply (minimum 3A for Pi 4, 5A for Pi 5)
-  * Monitor with micro-HDMI to HDMI cable (always connect to **HDMI0**, closest to the USB-C power port)
+  * Monitor with micro-HDMI to HDMI cable (plug into **HDMI**)
   * USB Keyboard and Mouse
   * Protective case / cooling
-* **Setup & Boot Steps**:
-  1. *Flash OS*: Use **Raspberry Pi Imager** on computer → Select device & 64-bit Raspberry Pi OS.
-  2. *Pre-configure Settings (Gear icon)*: Set username/password (avoid default `pi/raspberry`) and configure camp Wi-Fi.
-  3. *Connect Peripherals First*: MicroSD card, micro-HDMI into HDMI0, keyboard, mouse.
-  4. *Power On*: Plug in power supply last. The board powers on automatically into the desktop.
+* **Helping Campers Set Up Their Raspberry Pi**:
+  1. *Identify the Hardware*: Become familiar with the Raspberry Pi and the components included in each kit, such as the case, microSD card preloaded with Raspberry Pi OS, USB-C power supply, and micro-HDMI to standard HDMI cable.
+  2. *Insert the MicroSD Card*: Guide campers in inserting the card before connecting power. Raspberry Pi OS is already installed; no card preparation is needed.
+  3. *Connect the Equipment*: Help campers connect the monitor, keyboard, mouse, and power supply.
+  4. *Start the Computer*: Help campers navigate the desktop and troubleshoot common setup issues.
+* **Mentoring Prompts & Engagement**:
+  * Ask campers: *"Which part stores your files?"* and *"What would you like to create with this computer at home?"*
+  * Let them identify connections and try tasks with guidance. Explain that their take-home computer helps them move from passive consumers to active creators of technology.
 * **Key Volunteer Troubleshooting**:
-  * *Black screen*: Verify micro-HDMI is in **HDMI0** (not HDMI1) and power supply is firmly seated.
-  * *Rainbow icon / Lightning bolt*: Low voltage warning! Power supply does not supply adequate current (needs 3A/5A).
-  * *"Command not found"*: Linux terminal commands are strictly case-sensitive. Check spelling or update with `sudo apt update`.
+  * *Black screen*: Verify micro-HDMI is connected to **HDMI** (closest to power port) and power supply is firmly seated.
+  * *Low Voltage Warning or No Power*: Check the power connection and confirm the approved supply for the camp’s Pi model is in use. Ask the lead instructor to investigate if you’re unable to troubleshoot.
+  * *Administrator Commands*: Commands using `sudo` can change the system. Follow the instructor guide and ask the lead instructor before installing software or changing system settings. Keep detailed administrator procedures in the setup section.
+  * *Command Not Found*: Check spelling and capitalization. If the command still fails, ask the lead instructor to confirm the required software is installed. Running `sudo apt update` refreshes package lists; it does not install a missing program.
   * *Wi-Fi issues*: Check network icon in top-right taskbar or reboot the board.
 
 ---
@@ -193,7 +198,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 
 Before campers arrive:
 1. [ ] Reviewed Mentoring Guideline: **Let campers lead whenever possible** (ask permission before touching mouse/keyboard, explain actions, return control promptly).
-2. [ ] Verified Raspberry Pi hardware: Micro-HDMI connected to **HDMI0**, official 3A/5A power, and SD cards seated.
+2. [ ] Verified Raspberry Pi hardware: Micro-HDMI connected to **HDMI**, approved power supplies, and SD cards seated.
 3. [ ] Reviewed the 5-hour camp schedule and station transitions.
 4. [ ] Tested Guided Access and flight abort on the Drone Station iPad.
 5. [ ] Know the Developer Mode shortcut (`M` key) in the Pizza Delivery Game.

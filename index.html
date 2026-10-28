@@ -845,7 +845,7 @@
         label: "2. Intro to Raspberry Pi",
         icon: "🍓",
         badge: "Hardware",
-        subtitle: "Essential hardware checklist, OS flashing with Raspberry Pi Imager, first boot steps, and key troubleshooting.",
+        subtitle: "Become familiar with the Raspberry Pi hardware, help campers connect and use their computers, and troubleshoot common setup issues. The designated setup team prepares the operating system before camp.",
         body: `
           <div style="margin-bottom: 16px; background: var(--secondary-light); border: 1px solid var(--secondary); border-radius: 8px; padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -863,12 +863,12 @@
               <p>At its core, a Raspberry Pi is a tiny, single-board computer roughly the size of a credit card. It has all the components of a regular PC—processor, memory, USB ports, and HDMI output. The Pi gives students hands-on access to explore both <strong>software (code)</strong> and <strong>hardware (electronics)</strong>.</p>
             </div>
             <div class="info-box tip">
-              <h3>🧰 Essential Hardware Checklist (Per Station)</h3>
+              <h3>🧰 Essential Hardware Checklist for Each Camp Computer</h3>
               <ul>
                 <li><strong>Raspberry Pi Board:</strong> Raspberry Pi 4 or 5</li>
                 <li><strong>MicroSD Card:</strong> 32GB (serves as the Pi's "hard drive" for the OS and files)</li>
                 <li><strong>Official Power Supply:</strong> USB-C (at least 3A for Pi 4, 5A for Pi 5)</li>
-                <li><strong>Display & Cable:</strong> Monitor + micro-HDMI to HDMI cable (plug into <strong>HDMI0</strong>)</li>
+                <li><strong>Display & Cable:</strong> Monitor + micro-HDMI to HDMI cable (plug into <strong>HDMI</strong>)</li>
                 <li><strong>Peripherals:</strong> Standard USB keyboard and mouse</li>
                 <li><strong>Case:</strong> Protects the board and assists passive/active cooling</li>
               </ul>
@@ -876,13 +876,20 @@
           </div>
 
           <div class="info-box code-box" style="margin-top: 15px;">
-            <h3>⚡ Step-by-Step Setup: From Box to Boot</h3>
+            <h3>⚡ Helping Campers Set Up Their Raspberry Pi</h3>
             <ol style="margin-left: 20px; margin-top: 8px; line-height: 1.6;">
-              <li><strong>Install Raspberry Pi Imager:</strong> Free utility available on macOS, Windows, and Linux to flash the OS.</li>
-              <li><strong>Flash 64-bit OS:</strong> Choose Pi model (Pi 4/5) → Choose OS: <em>Raspberry Pi OS (64-bit)</em> → Select MicroSD card storage.</li>
-              <li><strong>Pre-configure Settings (Gear Icon):</strong> Set username & password (avoid default <code>pi/raspberry</code> for security) and pre-configure camp Wi-Fi SSID and password.</li>
-              <li><strong>First Boot:</strong> Insert MicroSD into Pi, connect micro-HDMI to <strong>HDMI0</strong> (port closest to USB-C power), connect USB keyboard/mouse, and plug in the power supply. The Pi boots directly to the desktop!</li>
+              <li><strong>Identify the Hardware:</strong> Become familiar with the Raspberry Pi and the components included in each kit, such as the case, microSD card preloaded with Raspberry Pi OS, USB-C power supply, and micro-HDMI to standard HDMI cable.</li>
+              <li><strong>Insert the MicroSD Card:</strong> Guide campers in inserting the card before connecting power. Raspberry Pi OS is already installed; no card preparation is needed.</li>
+              <li><strong>Connect the Equipment:</strong> Help campers connect the monitor, keyboard, mouse, and power supply.</li>
+              <li><strong>Start the Computer:</strong> Help campers navigate the desktop and troubleshoot common setup issues.</li>
             </ol>
+          </div>
+
+          <div class="info-box tip" style="margin-top: 15px;">
+            <h3>💬 Mentoring Prompts & Engagement</h3>
+            <p style="line-height: 1.6; margin-bottom: 0;">
+              Ask campers: <em>“Which part stores your files?”</em> and <em>“What would you like to create with this computer at home?”</em> Let them identify connections and try tasks with guidance. Explain that their take-home computer helps them move from passive consumers to active creators of technology.
+            </p>
           </div>
 
           <div class="grid-2" style="margin-top: 15px;">
@@ -891,17 +898,17 @@
               <ul>
                 <li><strong>The Desktop:</strong> Top-left Raspberry Pi icon opens applications (Thonny, Scratch, Chromium).</li>
                 <li><strong>The Terminal:</strong> Black icon with <code>&gt;</code> on the taskbar for command line.</li>
-                <li><strong><code>sudo</code>:</strong> "Super User Do"—runs commands with administrator privileges (e.g. <code>sudo apt update</code>).</li>
+                <li><strong>Administrator Commands:</strong> Commands using <code>sudo</code> can change the system. Follow the instructor guide and ask the lead instructor before installing software or changing system settings. Keep detailed administrator procedures in the setup section.</li>
                 <li><strong>File System:</strong> Tree hierarchy rooted at <code>/</code>. Camper files live in <code>/home/username</code> (shortcut: <code>~</code>).</li>
               </ul>
             </div>
             <div class="info-box warning-box">
               <h3>🚨 Quick Volunteer Troubleshooting</h3>
               <ul>
-                <li><strong>Black screen / Won't boot:</strong> Verify micro-HDMI cable is connected to <strong>HDMI0</strong> (closest to power port), not HDMI1. Ensure power supply is firmly seated.</li>
-                <li><strong>Rainbow square / Lightning bolt:</strong> Under-voltage warning! The power supply is inadequate. Swap to an official 3A/5A power brick.</li>
+                <li><strong>Black screen / Won't boot:</strong> Verify micro-HDMI cable is connected to <strong>HDMI</strong> (closest to power port). Ensure power supply is firmly seated.</li>
+                <li><strong>Low Voltage Warning or No Power:</strong> Check the power connection and confirm the approved supply for the camp’s Pi model is in use. Ask the lead instructor to investigate if you’re unable to troubleshoot.</li>
                 <li><strong>Wi-Fi not connecting:</strong> Click network icon in top-right corner to re-enter passphrase or reboot the Pi.</li>
-                <li><strong>"Command not found":</strong> Commands are strictly case-sensitive in Linux. Check spelling or run <code>sudo apt update</code>.</li>
+                <li><strong>Command Not Found:</strong> Check spelling and capitalization. If the command still fails, ask the lead instructor to confirm the required software is installed. Running <code>sudo apt update</code> refreshes package lists; it does not install a missing program.</li>
               </ul>
             </div>
           </div>
@@ -1340,7 +1347,7 @@
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">
-              <span><strong>Raspberry Pi Hardware:</strong> I know to connect displays to HDMI0, verify 3A/5A power, and how to spot low-voltage rainbow icons or Wi-Fi drops.</span>
+              <span><strong>Raspberry Pi Hardware:</strong> I know to connect displays to HDMI, verify approved power supplies, and how to spot low-voltage warnings or Wi-Fi drops.</span>
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">
