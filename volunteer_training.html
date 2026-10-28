@@ -922,58 +922,67 @@
         label: "3. Camp Day Schedule",
         icon: "⏰",
         badge: "Schedule",
-        subtitle: "A high-level blueprint of the 5-hour camp structure (4 hours seat time) and how the Florida camp operates.",
+        subtitle: "A 5-hour camp blueprint: 2 hours dedicated to setting up the Raspberry Pi computers, followed by 3 hours of rotating through interactive stations and showcase demos.",
         body: `
           <div class="info-box highlight">
-            <h3>📅 5-Hour Camp Structure at a Glance</h3>
-            <p>The camp is designed for 10–13 year olds (grades 6–8) with approximately 15 students per cohort. Each camper has access to dedicated Raspberry Pi hardware and station stations.</p>
+            <h3>📅 5-Hour Camp Structure: 2-Hour Setup + 3-Hour Station Rotations</h3>
+            <p>The camp is designed for 10–13 year olds (grades 6–8) with approximately 15 students per cohort. The day is structured into two main phases: <strong>2 hours dedicated to setting up their Raspberry Pi computers</strong>, followed by <strong>3 hours rotating through interactive STEM stations</strong> and project showcases.</p>
           </div>
 
           <table class="styled-table">
             <thead>
               <tr>
-                <th style="width: 20%;">Time / Block</th>
-                <th style="width: 35%;">Focus & Station Activity</th>
-                <th style="width: 45%;">Volunteer Role & Expectations</th>
+                <th style="width: 22%;">Time / Block</th>
+                <th style="width: 38%;">Focus & Station Activity</th>
+                <th style="width: 40%;">Volunteer Role & Expectations</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><strong>Hour 1 (45 min)</strong></td>
-                <td><strong>Welcome, Setup & Raspbian OS</strong><br>Peripherals unboxing, connecting monitors/mice, desktop tour, coding icebreaker.</td>
-                <td>Greet students at the door, check cable connections (micro-HDMI, CanaKit 5V power), ensure keyboards/mice are recognized.</td>
+              <tr style="background: var(--light-bg); font-weight: 700;">
+                <td colspan="3" style="color: var(--secondary-dark); border-left: 4px solid var(--secondary);">Phase 1: Setting Up the Pi Computers (2 Hours)</td>
               </tr>
               <tr>
-                <td><em>15 min Break</em></td>
-                <td colspan="2">Water, juice, and snacks. Volunteers help sanitize station gear and check equipment status.</td>
+                <td><strong>Hour 1 (50 min)</strong></td>
+                <td><strong>Kit Unboxing & Hardware Assembly</strong><br>Peripherals inventory, inserting preloaded microSD cards, connecting monitors via micro-HDMI, plugging in keyboards/mice, and connecting power supplies.</td>
+                <td>Greet students at the door, verify cable connections (micro-HDMI, approved USB-C power), and guide campers in identifying ports without taking over the controls.</td>
+              </tr>
+              <tr>
+                <td><em>10 min Break</em></td>
+                <td colspan="2">Water, juice, and snacks. Volunteers assist any station needing physical connection adjustments.</td>
               </tr>
               <tr>
                 <td><strong>Hour 2 (60 min)</strong></td>
-                <td><strong>Scratch & Block-Based Coding</strong><br>Visual programming basics, events, loops, interactive stories/animations.</td>
-                <td>Assist campers in building logic blocks; encourage pairing and prompt shy campers to share their animations.</td>
+                <td><strong>First Boot & Computer Orientation</strong><br>Booting into Raspberry Pi OS, desktop tour, Wi-Fi connectivity, file system overview, and testing peripherals with basic creative tools.</td>
+                <td>Guide campers through the desktop application menu, confirm Wi-Fi connections, verify sound/mouse settings, and troubleshoot any display issues.</td>
+              </tr>
+              <tr style="background: var(--light-bg); font-weight: 700;">
+                <td colspan="3" style="color: var(--primary-dark); border-left: 4px solid var(--primary);">Lunch & Recharge</td>
               </tr>
               <tr>
                 <td><em>30 min Lunch</em></td>
-                <td colspan="2">Pizza lunch break! 🍕 Build team spirit and connect with campers on their interests.</td>
+                <td colspan="2">Pizza lunch break! 🍕 Build team spirit, connect with campers on their tech interests, and prep station gear for afternoon rotations.</td>
+              </tr>
+              <tr style="background: var(--light-bg); font-weight: 700;">
+                <td colspan="3" style="color: var(--accent); border-left: 4px solid var(--accent);">Phase 2: Rotating Through the Stations (3 Hours)</td>
               </tr>
               <tr>
-                <td><strong>Hour 3 (60 min)</strong></td>
-                <td><strong>Station Rotations & Python Robotics</strong><br>GoPiGo robots, Python Thonny IDE, navigation and obstacle challenges.</td>
-                <td>Keep robot batteries charged, ensure floor courses are clear, guide Python command modifications.</td>
+                <td><strong>Hour 3 (50 min)</strong></td>
+                <td><strong>Station Rotation: Round 1</strong><br>Small-group rotations through specialized interactive stations: Drone flight paths, GoPiGo robotics navigation, Pizza Delivery game dev, or Web Dev/Scratch.</td>
+                <td>Staff assigned station: demonstrate safety rules, manage iPad DroneBlocks or Thonny Python setups, and guide hands-on coding challenges.</td>
               </tr>
               <tr>
-                <td><em>15 min Break</em></td>
-                <td colspan="2">Water, juice, snacks. Reset drones and station gear.</td>
+                <td><em>10 min Break</em></td>
+                <td colspan="2">Quick stretch, water, and snacks. Swap drone batteries and reset robot courses.</td>
               </tr>
               <tr>
-                <td><strong>Hour 4 (60 min)</strong></td>
-                <td><strong>Interactive STEM Stations & Minecraft Pi</strong><br>Hands-on rotation through specialized stations: Drone flight, Pizza Delivery game, Web Dev, Turtle Race, and GoPiGo courses.</td>
-                <td>Staff assigned station: lead demonstrations, enforce safety lines, guide code modifications, challenge fast finishers.</td>
+                <td><strong>Hour 4 (50 min)</strong></td>
+                <td><strong>Station Rotation: Round 2</strong><br>Campers rotate to their next hands-on stations to explore another domain (e.g. switching from drones to robotics or game modding).</td>
+                <td>Facilitate station transition, guide new groups through challenges, pace activities, and challenge fast finishers.</td>
               </tr>
               <tr>
-                <td><strong>Hour 5 (45 min)</strong></td>
-                <td><strong>Wrap-up, Project Showcase & Demos</strong><br>Campers present favorite creations to peers and parents, Q&A, certificates, next steps.</td>
-                <td>Help campers prepare their screens for demos, applaud every camper, assist with station teardown and inventory packing.</td>
+                <td><strong>Hour 5 (40 min)</strong></td>
+                <td><strong>Station Demos, Project Showcase & Wrap-up</strong><br>Campers demonstrate their favorite creations or autonomous runs to peers and visiting parents; certificates, Q&A, and station pack-up.</td>
+                <td>Help campers prepare demo screens, applaud every camper’s accomplishment, and assist with station inventory packing and teardown.</td>
               </tr>
             </tbody>
           </table>
@@ -1351,7 +1360,7 @@
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">
-              <span><strong>Camp Schedule:</strong> I understand the 5-hour flow (Hour 1: Setup/OS, Hour 2: Scratch, Hour 3: Python/GoPiGo, Hour 4: Specialized Stations, Hour 5: Showcase).</span>
+              <span><strong>Camp Schedule:</strong> I understand the 5-hour flow (2 hours for setting up the Pi computers, followed by 3 hours of station rotations and project showcase).</span>
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">

@@ -59,18 +59,20 @@ Volunteers are mentors who show every student that they belong in STEM:
 
 ## ⏰ Module 3: The Camp Day Breakdown
 
-The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~15 middle school students:
+The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~15 middle school students, split into **2 hours of setting up the Raspberry Pi computers** and **3 hours rotating through interactive stations and showcase demos**:
 
 | Time / Block | Camp Activity | Volunteer Responsibilities |
 | :--- | :--- | :--- |
-| **Hour 1 (45 min)** | **Welcome & Raspbian OS Exploration**<br>Peripherals unboxing, connecting monitors/mice, desktop tour, coding icebreaker. | Greet campers, ensure power (CanaKit 5V) and micro-HDMI cables are snug, guide first-time mouse and desktop navigation. |
-| *15 min Break* | Snack & beverage break. | Sanitize surfaces, check hardware readiness. |
-| **Hour 2 (60 min)** | **Scratch Programming**<br>Block-based programming, loops, conditionals, events, creating an interactive story. | Circulate room, encourage creative sprite choices, help connect logic blocks. |
+| **Phase 1** | **Setting Up the Pi Computers (2 Hours)** | |
+| **Hour 1 (50 min)** | **Kit Unboxing & Hardware Assembly**<br>Peripherals inventory, inserting preloaded microSD cards, connecting micro-HDMI, keyboard/mouse, power supply. | Greet campers, ensure power and micro-HDMI cables are snug, guide campers in identifying ports without touching controls. |
+| *10 min Break* | Snack & beverage break. | Check hardware readiness and assist stations. |
+| **Hour 2 (60 min)** | **First Boot & Computer Orientation**<br>Booting into Raspberry Pi OS, desktop tour, Wi-Fi connection, file navigation, testing peripherals. | Guide campers through desktop menus, confirm network access, troubleshoot initial setup issues. |
 | *30 min Lunch* | Pizza lunch break! 🍕 | Connect with campers, build team camaraderie, discuss their favorite video games and interests. |
-| **Hour 3 (60 min)** | **Python & GoPiGo Robotics Intro**<br>Python in Thonny IDE, connecting to GoPiGo rover, driving forward, backward, turns. | Keep battery packs secure, clear floor paths, assist with Python syntax. |
-| *15 min Break* | Snack & beverage break. | Reset drone batteries and clean floor courses. |
-| **Hour 4 (60 min)** | **Interactive Station Rotations**<br>Specialized small-group stations: Drones, Pizza Delivery, Web Dev, Turtle Race, GoPiGo courses. | Staff assigned station, guide hands-on coding, manage pacing, challenge fast finishers. |
-| **Hour 5 (45 min)** | **Wrap-up, Project Showcase & Demos**<br>Students show favorite projects to peers/parents, Q&A, certificates, next steps. | Help students prepare demo screens, cheer and applaud every camper, assist with teardown. |
+| **Phase 2** | **Rotating Through the Stations (3 Hours)** | |
+| **Hour 3 (50 min)** | **Station Rotation: Round 1**<br>Small-group hands-on rotations: Drones (Tello EDU), GoPiGo Robotics, Pizza Delivery Game, Web Dev / Scratch. | Staff assigned station, keep battery packs secure, guide hands-on coding, enforce drone flight boundaries. |
+| *10 min Break* | Snack & beverage break. | Reset drone batteries and clean floor courses. |
+| **Hour 4 (50 min)** | **Station Rotation: Round 2**<br>Campers transition to their next hands-on station challenge. | Facilitate transition, guide new groups, pace activities, and challenge fast finishers. |
+| **Hour 5 (40 min)** | **Station Demos, Project Showcase & Wrap-up**<br>Campers demonstrate favorite creations to peers/parents, Q&A, certificates, next steps. | Help campers stage demo screens, celebrate every camper, assist with station inventory teardown. |
 
 ---
 
@@ -199,7 +201,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 Before campers arrive:
 1. [ ] Reviewed Mentoring Guideline: **Let campers lead whenever possible** (ask permission before touching mouse/keyboard, explain actions, return control promptly).
 2. [ ] Verified Raspberry Pi hardware: Micro-HDMI connected to **HDMI**, approved power supplies, and SD cards seated.
-3. [ ] Reviewed the 5-hour camp schedule and station transitions.
+3. [ ] Reviewed the 5-hour camp schedule (2 hours for Pi computer setup + 3 hours for station rotations).
 4. [ ] Tested Guided Access and flight abort on the Drone Station iPad.
 5. [ ] Know the Developer Mode shortcut (`M` key) in the Pizza Delivery Game.
 6. [ ] Know how to run `git restore` or `git reset --hard` if game code crashes.
