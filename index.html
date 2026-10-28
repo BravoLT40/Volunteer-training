@@ -30,6 +30,11 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
+    :focus-visible {
+      outline: 2px solid var(--secondary);
+      outline-offset: 2px;
+    }
+
     body {
       background-color: var(--light-bg);
       color: var(--dark);
@@ -160,14 +165,14 @@
     }
 
     .nav-check {
-      width: 18px;
-      height: 18px;
-      border-radius: 4px;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
       border: 1.5px solid #64748b;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 12px;
       color: transparent;
       transition: all 0.2s ease;
       flex-shrink: 0;
@@ -245,10 +250,11 @@
       gap: 6px;
       font-size: 0.85rem;
       font-weight: 700;
-      color: var(--primary);
+      color: #9a3412;
       background: var(--primary-light);
       padding: 5px 14px;
       border-radius: 20px;
+      border: 1px solid rgba(249, 157, 30, 0.35);
     }
 
     .mark-done-btn {
@@ -306,11 +312,24 @@
 
     .btn-primary {
       background: var(--primary);
-      color: white;
+      color: #0f172a;
+      font-weight: 700;
     }
 
     .btn-primary:hover {
       background: var(--primary-dark);
+      color: #ffffff;
+    }
+
+    .slide-footer-nav {
+      padding: 20px 36px;
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .slide-viewport {
@@ -666,6 +685,37 @@
       .slide-header, .slide-body {
         padding: 20px;
       }
+      .slide-footer-nav {
+        padding: 16px 20px;
+      }
+    }
+
+    @media print {
+      body {
+        display: block !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+        color: black !important;
+      }
+      .sidebar, .topbar, .slide-footer-nav, .sidebar-toggle, .mark-done-btn {
+        display: none !important;
+      }
+      .main-content, .slide-viewport {
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+      }
+      .slide-card {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      .slide-header, .slide-body {
+        padding: 12px 0 !important;
+      }
     }
   </style>
 </head>
@@ -687,7 +737,7 @@
     <div class="progress-bar-container">
       <div class="progress-header">
         <span>Training Completion</span>
-        <span id="progress-percent">0 of 9 (0%)</span>
+        <span id="progress-percent">0 of 10 (0%)</span>
       </div>
       <div class="progress-track">
         <div class="progress-fill" id="progress-fill"></div>
@@ -716,6 +766,7 @@
         </button>
       </div>
       <div class="topbar-actions">
+        <button class="btn btn-secondary" onclick="window.print()" title="Print current module" aria-label="Print current module" style="padding: 8px 12px;">🖨️ Print</button>
         <button class="btn btn-secondary" onclick="prevSlide()">← Previous</button>
         <button class="btn btn-primary" onclick="nextSlide()">Next Module →</button>
       </div>
@@ -1317,9 +1368,14 @@
             </label>
           </div>
 
-          <div id="completion-banner" class="info-box tip" style="display: none; margin-top: 20px;">
-            <h3>🏆 Training Complete! You are Ready for Florida Camp!</h3>
-            <p>Thank you for dedicating your time to empower Florida youth through The Pi Academy. You are making a huge difference in these kids' lives!</p>
+          <div id="completion-banner" class="info-box tip" style="display: none; margin-top: 25px; border-left: 4px solid #10b981; background: #ecfdf5; padding: 24px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 8px;">🎉 🏆 🎓</div>
+            <h3 style="color: #065f46; font-size: 1.3rem; justify-content: center; font-weight: 800;">Congratulations! You Are Ready for Florida Camp!</h3>
+            <p style="color: #047857; margin-top: 8px; font-size: 0.95rem;">You have verified all readiness items and completed The Pi Academy Volunteer Training.</p>
+            <div style="margin-top: 18px; display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+              <button class="btn btn-primary" onclick="window.print()" style="background: #10b981; color: white;">🖨️ Print Completion Checklist & Guide</button>
+              <button class="btn btn-secondary" onclick="resetProgress()" style="font-size: 0.8rem;">Reset Progress</button>
+            </div>
           </div>
         `
       }
@@ -1327,6 +1383,70 @@
 
     let currentSlide = 0;
     const completedSlides = new Set();
+
+    // LocalStorage Persistence
+    function loadSavedState() {
+      try {
+        const savedDone = localStorage.getItem("pi_camp_completed");
+        if (savedDone) {
+          JSON.parse(savedDone).forEach(idx => completedSlides.add(idx));
+        }
+        const savedSlide = localStorage.getItem("pi_camp_current_slide");
+        if (savedSlide !== null) {
+          const parsed = parseInt(savedSlide);
+          if (!isNaN(parsed) && parsed >= 0 && parsed < slides.length) {
+            currentSlide = parsed;
+          }
+        }
+      } catch (e) {
+        console.warn("Could not load saved state", e);
+      }
+    }
+
+    function persistState() {
+      try {
+        localStorage.setItem("pi_camp_completed", JSON.stringify([...completedSlides]));
+        localStorage.setItem("pi_camp_current_slide", currentSlide.toString());
+      } catch (e) {
+        console.warn("Could not save state", e);
+      }
+    }
+
+    function persistChecklistState() {
+      try {
+        const checkboxes = document.querySelectorAll(".checklist input[type='checkbox']");
+        if (checkboxes.length > 0) {
+          const state = Array.from(checkboxes).map(cb => cb.checked);
+          localStorage.setItem("pi_camp_checklist", JSON.stringify(state));
+        }
+      } catch (e) {}
+    }
+
+    function restoreChecklistState() {
+      try {
+        const saved = localStorage.getItem("pi_camp_checklist");
+        if (saved) {
+          const state = JSON.parse(saved);
+          const checkboxes = document.querySelectorAll(".checklist input[type='checkbox']");
+          checkboxes.forEach((cb, i) => {
+            if (state[i] !== undefined) cb.checked = state[i];
+          });
+          updateReadinessChecklist(false);
+        }
+      } catch (e) {}
+    }
+
+    function resetProgress() {
+      if (confirm("Reset your volunteer training completion progress?")) {
+        completedSlides.clear();
+        try {
+          localStorage.removeItem("pi_camp_completed");
+          localStorage.removeItem("pi_camp_current_slide");
+          localStorage.removeItem("pi_camp_checklist");
+        } catch (e) {}
+        loadSlide(0);
+      }
+    }
 
     // Build nav once; updateNav() only flips classes.
     function buildNav() {
@@ -1344,6 +1464,13 @@
         const li = document.createElement("li");
         li.dataset.idx = idx;
         li.className = "nav-item";
+        li.tabIndex = 0;
+        li.onkeydown = (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            loadSlide(idx);
+          }
+        };
         li.onclick = (e) => {
           if (e.target.closest(".nav-check")) { e.stopPropagation(); toggleCheck(idx); return; }
           loadSlide(idx);
@@ -1374,6 +1501,7 @@
         completedSlides.add(idx);
       }
       updateUI();
+      persistState();
     }
 
     function toggleModuleCompletion() {
@@ -1384,7 +1512,17 @@
       if (index < 0 || index >= slides.length) return;
       currentSlide = index;
 
+      // Close mobile menu if open
+      const navList = document.getElementById("nav-list");
+      if (navList && navList.classList.contains("open")) {
+        navList.classList.remove("open");
+      }
+
       const s = slides[currentSlide];
+      const isFirst = currentSlide === 0;
+      const isLast = currentSlide === slides.length - 1;
+      const isDone = completedSlides.has(currentSlide);
+
       const container = document.getElementById("slide-content");
       container.innerHTML = `
         <div class="slide-header">
@@ -1395,13 +1533,42 @@
         <div class="slide-body">
           ${s.body}
         </div>
+        <div class="slide-footer-nav">
+          <button class="btn btn-secondary" onclick="prevSlide()" ${isFirst ? 'style="visibility:hidden;"' : ''}>← Previous Module</button>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <button class="mark-done-btn ${isDone ? 'is-done' : ''}" onclick="toggleModuleCompletion()">
+              <span>✓</span> <span>${isDone ? 'Completed ✓' : 'Mark as Done'}</span>
+            </button>
+            ${isLast ? `
+              <button class="btn btn-primary" onclick="markAndFinish()">Finish Training 🎉</button>
+            ` : `
+              <button class="btn btn-primary" onclick="nextSlide()">Next Module →</button>
+            `}
+          </div>
+        </div>
       `;
 
       document.getElementById("station-badge").innerText = s.category;
 
+      if (isLast) {
+        restoreChecklistState();
+      }
+
       updateUI();
+      persistState();
 
       document.querySelector(".slide-viewport").scrollTop = 0;
+    }
+
+    function markAndFinish() {
+      completedSlides.add(currentSlide);
+      updateUI();
+      persistState();
+      const banner = document.getElementById("completion-banner");
+      if (banner) {
+        banner.style.display = "block";
+        banner.scrollIntoView({ behavior: "smooth" });
+      }
     }
 
     function nextSlide() {
@@ -1410,6 +1577,7 @@
         loadSlide(currentSlide + 1);
       } else {
         updateUI();
+        persistState();
       }
     }
 
@@ -1423,12 +1591,26 @@
       const isDone = completedSlides.has(currentSlide);
       const markBtn = document.getElementById("mark-done-toggle");
       const markLabel = document.getElementById("mark-done-label");
-      if (isDone) {
-        markBtn.classList.add("is-done");
-        markLabel.innerText = "Completed ✓";
-      } else {
-        markBtn.classList.remove("is-done");
-        markLabel.innerText = "Mark as Done";
+      if (markBtn && markLabel) {
+        if (isDone) {
+          markBtn.classList.add("is-done");
+          markLabel.innerText = "Completed ✓";
+        } else {
+          markBtn.classList.remove("is-done");
+          markLabel.innerText = "Mark as Done";
+        }
+      }
+
+      // Sync footer mark done button if present
+      const footerMarkBtn = document.querySelector(".slide-footer-nav .mark-done-btn");
+      if (footerMarkBtn) {
+        if (isDone) {
+          footerMarkBtn.classList.add("is-done");
+          footerMarkBtn.innerHTML = "<span>✓</span> <span>Completed ✓</span>";
+        } else {
+          footerMarkBtn.classList.remove("is-done");
+          footerMarkBtn.innerHTML = "<span>✓</span> <span>Mark as Done</span>";
+        }
       }
 
       updateNav();
@@ -1440,22 +1622,40 @@
       document.getElementById("progress-fill").style.width = pct + "%";
     }
 
-    function updateReadinessChecklist() {
+    function updateReadinessChecklist(autoCheckSlide = true) {
+      persistChecklistState();
       const checkboxes = document.querySelectorAll(".checklist input[type='checkbox']");
-      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      const allChecked = Array.from(checkboxes).length > 0 && Array.from(checkboxes).every(cb => cb.checked);
       const banner = document.getElementById("completion-banner");
       if (banner) {
         banner.style.display = allChecked ? "block" : "none";
       }
-      if (allChecked) {
+      if (allChecked && autoCheckSlide) {
         completedSlides.add(currentSlide);
         updateUI();
+        persistState();
       }
     }
 
+    // Keyboard navigation
+    window.addEventListener("keydown", (e) => {
+      if (["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName)) return;
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key.toLowerCase() === "m") {
+        e.preventDefault();
+        toggleModuleCompletion();
+      }
+    });
+
     // Initialize
+    loadSavedState();
     buildNav();
-    loadSlide(0);
+    loadSlide(currentSlide);
   </script>
 </body>
 </html>
