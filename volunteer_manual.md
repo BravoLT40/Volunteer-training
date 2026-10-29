@@ -59,20 +59,32 @@ Volunteers are mentors who show every student that they belong in STEM:
 
 ## ⏰ Module 3: The Camp Day Breakdown
 
-The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~15 middle school students, split into **2 hours of setting up the Raspberry Pi computers** and **3 hours rotating through interactive stations and showcase demos**:
+The camp begins with introductions and Raspberry Pi computer setup, followed by four hands-on station rotations, a meal after Round 1, and a closing celebration.
 
-| Time / Block | Camp Activity | Volunteer Responsibilities |
+* **Target Audience**: Designed for students ages 10–13 (grades 6–8), with approximately two students per volunteer.
+* **Structure**: Two main phases (setting up Raspberry Pi computers and exploring interactive STEM stations) plus a concluding showcase and survey.
+* **Total Duration**: 5 hours (300 minutes).
+
+### Detailed Pacing & Timeline
+
+| Time / Block | Focus & Station Activity | Volunteer Role & Expectations |
 | :--- | :--- | :--- |
-| **Phase 1** | **Setting Up the Pi Computers (2 Hours)** | |
-| **Hour 1 (50 min)** | **Kit Unboxing & Hardware Assembly**<br>Peripherals inventory, inserting preloaded microSD cards, connecting micro-HDMI, keyboard/mouse, power supply. | Greet campers, ensure power and micro-HDMI cables are snug, guide campers in identifying ports without touching controls. |
-| *10 min Break* | Snack & beverage break. | Check hardware readiness and assist stations. |
-| **Hour 2 (60 min)** | **First Boot & Computer Orientation**<br>Booting into Raspberry Pi OS, desktop tour, Wi-Fi connection, file navigation, testing peripherals. | Guide campers through desktop menus, confirm network access, troubleshoot initial setup issues. |
-| *30 min Lunch* | Pizza lunch break! 🍕 | Connect with campers, build team camaraderie, discuss their favorite video games and interests. |
-| **Phase 2** | **Rotating Through the Stations (3 Hours)** | |
-| **Hour 3 (50 min)** | **Station Rotation: Round 1**<br>Small-group hands-on rotations: Drones (Tello EDU), GoPiGo Robotics, Pizza Delivery Game, Web Dev / Scratch. | Staff assigned station, keep battery packs secure, guide hands-on coding, enforce drone flight boundaries. |
-| *10 min Break* | Snack & beverage break. | Reset drone batteries and clean floor courses. |
-| **Hour 4 (50 min)** | **Station Rotation: Round 2**<br>Campers transition to their next hands-on station challenge. | Facilitate transition, guide new groups, pace activities, and challenge fast finishers. |
-| **Hour 5 (40 min)** | **Station Demos, Project Showcase & Wrap-up**<br>Campers demonstrate favorite creations to peers/parents, Q&A, certificates, next steps. | Help campers stage demo screens, celebrate every camper, assist with station inventory teardown. |
+| **Phase I** | **Welcome and Computer Setup (80 min)** | |
+| **10 min** | **Welcome and Introduction**<br>The lead instructor briefly introduces themselves, then invites volunteers to introduce themselves. | Greet students at the door, briefly introduce yourself, and help campers feel welcome. |
+| **10 min** | **Camp Overview and Why Coding Matters**<br>The lead instructor outlines the day, explains why learning to code matters, and introduces career opportunities in technology. | Connect the discussion to students’ interests and help them see themselves as future creators of technology. |
+| **10 min** | **Kit Distribution**<br>Students come to the front of the room to collect their Raspberry Pi computer kit, monitor, keyboard, and mouse. | Help distribute equipment and guide students back to their seats. |
+| **20 min** | **Kit Unboxing and Hardware Assembly**<br>Campers identify kit components, insert the preloaded microSD card, connect monitor, keyboard, and mouse, and connect the power supply last. | Help campers identify ports and check micro-HDMI and approved USB-C power connections. Let campers lead; provide direct assistance when needed and return control promptly. |
+| **10 min** *(Optional)* | **Break**<br>Water, juice, and snacks. | Assist campers with equipment checks and help them prepare for first boot. |
+| **20 min** | **First Boot and Computer Orientation**<br>Campers start Raspberry Pi OS, explore the desktop and file system, connect to Wi-Fi, and test equipment using basic creative tools. | Guide campers through the application menu, confirm Wi-Fi connections, check sound and mouse settings, and troubleshoot display issues. |
+| **Phase II** | **Rotating Through the Stations (200 min)** | |
+| **40 min** | **Station Rotation: Round 1**<br>Small groups explore interactive stations such as drone flight paths, GoPiGo robot navigation, Pizza Delivery game development, or web development and Scratch. | Staff your assigned station, demonstrate safety rules, manage iPad DroneBlocks or Thonny Python setup as needed, and guide hands-on coding challenges. |
+| **30 min** | **Lunch or Dinner**<br>Meal break after the first station rotation. 🍕 | Build team spirit and talk with campers about their technology interests. |
+| **40 min** | **Station Rotation: Round 2**<br>Campers rotate to their next hands-on station to explore another area of technology (e.g. moving from drones to robotics or game modification). | Staff your assigned station, demonstrate safety rules, manage iPad DroneBlocks or Thonny Python setup as needed, and guide hands-on coding challenges. |
+| **40 min** | **Station Rotation: Round 3**<br>Campers rotate to their next hands-on station to explore another area of technology. | Guide the transition, help new groups work through challenges, pace activities, and offer additional challenges to campers who finish early. |
+| **10 min** | **Break**<br>Quick stretch, water, and snacks. | Swap drone batteries and reset robot courses. |
+| **40 min** | **Station Rotation: Round 4**<br>Campers rotate to their next hands-on station to explore another area of technology. | Guide the transition, help new groups work through challenges, pace activities, and offer additional challenges to campers who finish early. |
+| **Conclusion** | **Wrap Up and Celebration (20 min)** | |
+| **20 min** | **Wrap Up, Student Survey, and Group Photo**<br>The lead instructor closes the camp and celebrates what students learned. Students complete the camp survey and gather for a group photo. | Help campers complete the survey, organize the group photo in accordance with photo permissions, and assist with packing equipment to take home. |
 
 ---
 
@@ -201,7 +213,7 @@ The Florida camp runs for **5 hours total (4 hours of active seat time)** for ~1
 Before campers arrive:
 1. [ ] Reviewed Mentoring Guideline: **Let campers lead whenever possible** (ask permission before touching mouse/keyboard, explain actions, return control promptly).
 2. [ ] Verified Raspberry Pi hardware: Micro-HDMI connected to **HDMI**, approved power supplies, and SD cards seated.
-3. [ ] Reviewed the 5-hour camp schedule (2 hours for Pi computer setup + 3 hours for station rotations).
+3. [ ] Reviewed the 5-hour camp schedule (Phase I: Pi Setup, Phase II: Four 40-min Station Rotations with meal after Round 1, Conclusion: Survey & Photo).
 4. [ ] Tested Guided Access and flight abort on the Drone Station iPad.
 5. [ ] Know the Developer Mode shortcut (`M` key) in the Pizza Delivery Game.
 6. [ ] Know how to run `git restore` or `git reset --hard` if game code crashes.

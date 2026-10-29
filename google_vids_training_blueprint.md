@@ -69,15 +69,12 @@ Use these exact scenes inside the Google Vids editor.
   * Animated timeline graphic or step-by-step numbered cards showing the 5-hour flow.
   * Clock icon transitions.
 * **On-Screen Text**:
-  * *Phase 1 (Hours 1–2): Setting Up the Pi Computers*
-  * *Unboxing, Hardware Assembly, MicroSD & Peripherals*
-  * *First Boot & Raspberry Pi OS Desktop Orientation*
-  * *Lunch: Pizza Time! 🍕*
-  * *Phase 2 (Hours 3–5): Rotating Through the Stations*
-  * *Round 1 & 2: Drones, GoPiGo Robotics, Game Dev, Web/Scratch*
-  * *Hour 5: Project Showcase & Camper Demos*
+  * *Phase I (80 min): Welcome, Introductions & Raspberry Pi Setup*
+  * *Phase II (200 min): Four 40-Min Interactive Station Rotations*
+  * *Meal Break (30 min) right after Round 1 🍕*
+  * *Conclusion (20 min): Camp Wrap-up, Survey & Group Photo 📸*
 * **AI Voiceover Script**:
-  > "Here is how our 5-hour camp day flows. The first two hours are dedicated to setting up the Raspberry Pi computers—from unboxing components and connecting displays to booting up into the desktop. After a pizza lunch break, campers spend the next three hours rotating through our hands-on interactive stations: drones, robotics, game programming, and web design. Finally, the day wraps up with our camper showcase where students demo their creations for friends and parents!"
+  > "Here is how our 5-hour camp day flows. Phase one begins with welcoming campers, introductions, and assembling our Raspberry Pi computers from unboxing to first boot. In phase two, campers rotate through four 40-minute interactive STEM stations—flying drones, coding GoPiGo robots, modding games, and web design—with a meal break after round one. We close out the day with a camp survey, celebrating camper achievements, and a commemorative group photo!"
 
 ---
 

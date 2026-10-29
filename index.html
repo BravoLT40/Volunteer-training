@@ -922,67 +922,97 @@
         label: "3. Camp Day Schedule",
         icon: "⏰",
         badge: "Schedule",
-        subtitle: "A 5-hour camp blueprint: 2 hours dedicated to setting up the Raspberry Pi computers, followed by 3 hours of rotating through interactive stations and showcase demos.",
+        subtitle: "The camp begins with introductions and Raspberry Pi computer setup, followed by four hands-on station rotations, a meal after Round 1, and a closing celebration.",
         body: `
           <div class="info-box highlight">
-            <h3>📅 5-Hour Camp Structure: 2-Hour Setup + 3-Hour Station Rotations</h3>
-            <p>The camp is designed for 10–13 year olds (grades 6–8) with approximately 15 students per cohort. The day is structured into two main phases: <strong>2 hours dedicated to setting up their Raspberry Pi computers</strong>, followed by <strong>3 hours rotating through interactive STEM stations</strong> and project showcases.</p>
+            <h3>📅 Camp Structure & Pacing</h3>
+            <p>Designed for students ages 10–13 (grades 6–8), with approximately two students per volunteer. The day has two main phases: <strong>setting up Raspberry Pi computers</strong> and <strong>exploring interactive STEM stations</strong>. <em>Total duration: 5 hours (300 minutes).</em></p>
           </div>
 
           <table class="styled-table">
             <thead>
               <tr>
-                <th style="width: 22%;">Time / Block</th>
-                <th style="width: 38%;">Focus & Station Activity</th>
+                <th style="width: 18%;">Time / Block</th>
+                <th style="width: 42%;">Focus & Station Activity</th>
                 <th style="width: 40%;">Volunteer Role & Expectations</th>
               </tr>
             </thead>
             <tbody>
               <tr style="background: var(--light-bg); font-weight: 700;">
-                <td colspan="3" style="color: var(--secondary-dark); border-left: 4px solid var(--secondary);">Phase 1: Setting Up the Pi Computers (2 Hours)</td>
+                <td colspan="3" style="color: var(--secondary-dark); border-left: 4px solid var(--secondary);">Phase I: Welcome and Computer Setup (80 min)</td>
               </tr>
               <tr>
-                <td><strong>Hour 1 (50 min)</strong></td>
-                <td><strong>Kit Unboxing & Hardware Assembly</strong><br>Peripherals inventory, inserting preloaded microSD cards, connecting monitors via micro-HDMI, plugging in keyboards/mice, and connecting power supplies.</td>
-                <td>Greet students at the door, verify cable connections (micro-HDMI, approved USB-C power), and guide campers in identifying ports without taking over the controls.</td>
+                <td><strong>10 min</strong></td>
+                <td><strong>Welcome and Introduction</strong><br>The lead instructor briefly introduces themselves, then invites the volunteers to introduce themselves.</td>
+                <td>Greet students at the door, briefly introduce yourself, and help campers feel welcome.</td>
               </tr>
               <tr>
-                <td><em>10 min Break</em></td>
-                <td colspan="2">Water, juice, and snacks. Volunteers assist any station needing physical connection adjustments.</td>
+                <td><strong>10 min</strong></td>
+                <td><strong>Camp Overview and Why Coding Matters</strong><br>The lead instructor outlines the day, explains why learning to code matters, and introduces career opportunities in technology.</td>
+                <td>Connect the discussion to students’ interests and help them see themselves as future creators of technology.</td>
               </tr>
               <tr>
-                <td><strong>Hour 2 (60 min)</strong></td>
-                <td><strong>First Boot & Computer Orientation</strong><br>Booting into Raspberry Pi OS, desktop tour, Wi-Fi connectivity, file system overview, and testing peripherals with basic creative tools.</td>
-                <td>Guide campers through the desktop application menu, confirm Wi-Fi connections, verify sound/mouse settings, and troubleshoot any display issues.</td>
+                <td><strong>10 min</strong></td>
+                <td><strong>Kit Distribution</strong><br>Students come to the front of the room to collect their Raspberry Pi computer kit, monitor, keyboard, and mouse.</td>
+                <td>Help distribute equipment and guide students back to their seats.</td>
               </tr>
+              <tr>
+                <td><strong>20 min</strong></td>
+                <td><strong>Kit Unboxing and Hardware Assembly</strong><br>Campers identify the kit components, insert the preloaded microSD card, connect the monitor, keyboard, and mouse, and connect the power supply last.</td>
+                <td>Help campers identify ports and check the micro-HDMI and approved USB-C power connections. Let campers lead; provide direct assistance when needed and return control promptly.</td>
+              </tr>
+              <tr>
+                <td><strong>10 min</strong> <em>(Optional)</em></td>
+                <td><strong>Break</strong><br>Water, juice, and snacks.</td>
+                <td>Assist campers with equipment checks and help them prepare for first boot.</td>
+              </tr>
+              <tr>
+                <td><strong>20 min</strong></td>
+                <td><strong>First Boot and Computer Orientation</strong><br>Campers start Raspberry Pi OS, explore the desktop and file system, connect to Wi-Fi, and test their equipment using basic creative tools.</td>
+                <td>Guide campers through the application menu, confirm Wi-Fi connections, check sound and mouse settings, and troubleshoot display issues.</td>
+              </tr>
+
               <tr style="background: var(--light-bg); font-weight: 700;">
-                <td colspan="3" style="color: var(--primary-dark); border-left: 4px solid var(--primary);">Lunch & Recharge</td>
+                <td colspan="3" style="color: var(--accent); border-left: 4px solid var(--accent);">Phase II: Rotating Through the Stations (200 min)</td>
               </tr>
               <tr>
-                <td><em>30 min Lunch</em></td>
-                <td colspan="2">Pizza lunch break! 🍕 Build team spirit, connect with campers on their tech interests, and prep station gear for afternoon rotations.</td>
+                <td><strong>40 min</strong></td>
+                <td><strong>Station Rotation: Round 1</strong><br>Small groups explore interactive stations such as drone flight paths, GoPiGo robot navigation, Pizza Delivery game development, or web development and Scratch.</td>
+                <td>Staff your assigned station, demonstrate safety rules, manage the iPad DroneBlocks or Thonny Python setup as needed, and guide hands-on coding challenges.</td>
               </tr>
+              <tr>
+                <td><strong>30 min</strong></td>
+                <td><strong>Lunch or Dinner</strong><br>Meal break after the first station rotation. 🍕</td>
+                <td>Build team spirit and talk with campers about their technology interests.</td>
+              </tr>
+              <tr>
+                <td><strong>40 min</strong></td>
+                <td><strong>Station Rotation: Round 2</strong><br>Campers rotate to their next hands-on station to explore another area of technology, such as moving from drones to robotics or game modification.</td>
+                <td>Staff your assigned station, demonstrate safety rules, manage the iPad DroneBlocks or Thonny Python setup as needed, and guide hands-on coding challenges.</td>
+              </tr>
+              <tr>
+                <td><strong>40 min</strong></td>
+                <td><strong>Station Rotation: Round 3</strong><br>Campers rotate to their next hands-on station to explore another area of technology, such as moving from drones to robotics or game modification.</td>
+                <td>Guide the transition, help new groups work through challenges, pace activities, and offer additional challenges to campers who finish early.</td>
+              </tr>
+              <tr>
+                <td><strong>10 min</strong></td>
+                <td><strong>Break</strong><br>Quick stretch, water, and snacks.</td>
+                <td>Swap drone batteries and reset robot courses.</td>
+              </tr>
+              <tr>
+                <td><strong>40 min</strong></td>
+                <td><strong>Station Rotation: Round 4</strong><br>Campers rotate to their next hands-on station to explore another area of technology, such as moving from drones to robotics or game modification.</td>
+                <td>Guide the transition, help new groups work through challenges, pace activities, and offer additional challenges to campers who finish early.</td>
+              </tr>
+
               <tr style="background: var(--light-bg); font-weight: 700;">
-                <td colspan="3" style="color: var(--accent); border-left: 4px solid var(--accent);">Phase 2: Rotating Through the Stations (3 Hours)</td>
+                <td colspan="3" style="color: var(--primary); border-left: 4px solid var(--primary);">Conclusion (20 min)</td>
               </tr>
               <tr>
-                <td><strong>Hour 3 (50 min)</strong></td>
-                <td><strong>Station Rotation: Round 1</strong><br>Small-group rotations through specialized interactive stations: Drone flight paths, GoPiGo robotics navigation, Pizza Delivery game dev, or Web Dev/Scratch.</td>
-                <td>Staff assigned station: demonstrate safety rules, manage iPad DroneBlocks or Thonny Python setups, and guide hands-on coding challenges.</td>
-              </tr>
-              <tr>
-                <td><em>10 min Break</em></td>
-                <td colspan="2">Quick stretch, water, and snacks. Swap drone batteries and reset robot courses.</td>
-              </tr>
-              <tr>
-                <td><strong>Hour 4 (50 min)</strong></td>
-                <td><strong>Station Rotation: Round 2</strong><br>Campers rotate to their next hands-on stations to explore another domain (e.g. switching from drones to robotics or game modding).</td>
-                <td>Facilitate station transition, guide new groups through challenges, pace activities, and challenge fast finishers.</td>
-              </tr>
-              <tr>
-                <td><strong>Hour 5 (40 min)</strong></td>
-                <td><strong>Station Demos, Project Showcase & Wrap-up</strong><br>Campers demonstrate their favorite creations or autonomous runs to peers and visiting parents; certificates, Q&A, and station pack-up.</td>
-                <td>Help campers prepare demo screens, applaud every camper’s accomplishment, and assist with station inventory packing and teardown.</td>
+                <td><strong>20 min</strong></td>
+                <td><strong>Wrap Up, Student Survey, and Group Photo</strong><br>The lead instructor closes the camp and celebrates what students learned. Students complete the camp survey and gather for a group photo.</td>
+                <td>Help campers complete the survey, organize the group photo in accordance with photo permissions, and assist with packing equipment to take home.</td>
               </tr>
             </tbody>
           </table>
@@ -1360,7 +1390,7 @@
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">
-              <span><strong>Camp Schedule:</strong> I understand the 5-hour flow (2 hours for setting up the Pi computers, followed by 3 hours of station rotations and project showcase).</span>
+              <span><strong>Camp Schedule:</strong> I understand the 5-hour flow (Phase 1: Welcome & Pi Setup; Phase 2: Four 40-minute Station Rotations with a meal after Round 1; Conclusion: Survey & Group Photo).</span>
             </label>
             <label class="check-item">
               <input type="checkbox" onchange="updateReadinessChecklist()">
